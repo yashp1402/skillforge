@@ -1,0 +1,3 @@
+I’m using Auth.js v5 with credentials + JWT sessions. 
+Prisma includes the standard Account/Session models, but for this project sessions 
+are JWT-backed; those tables would be used if I added Google/GitHub OAuth.

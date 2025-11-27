@@ -1,36 +1,243 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📘 SkillForge – Career Roadmap & Job-Fit Planner
 
-## Getting Started
+SkillForge is a full-stack **Next.js 16** application designed to help users track skills, compare them against job descriptions, identify gaps, and build a personalized learning roadmap.  
+It also includes job application tracking, learning goals, and a clean dashboard experience.
 
-First, run the development server:
+This project is built using a modern **2025 tech stack** to demonstrate full-stack proficiency for software engineering roles.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+# 🚀 Tech Stack
+
+### **Frontend / Full Stack**
+- ⚛️ **Next.js 16** (App Router, React Server Components)
+- 🧠 **React** + **TypeScript**
+- 🎨 **Tailwind CSS** (with dark mode)
+- 🧩 **shadcn/ui** components
+- 🌗 **next-themes** (light/dark theme toggle)
+
+### **Backend**
+- 🟦 **Next.js Route Handlers** (`app/api/*`)
+- 🧾 **Zod** for schema validation
+- 🔐 **Auth.js (NextAuth)** with Credentials provider
+- 🔑 Secure DB-backed sessions
+
+### **Database**
+- 🐘 **PostgreSQL**
+- 📦 **Prisma ORM**
+- 🛠️ Full CRUD on skills, jobs, goals, applications
+
+### **Developer Tools**
+- Prisma Studio  
+- ESLint  
+- Vercel-ready deployment  
+
+---
+
+# 🌟 Features
+
+### 👤 User Authentication
+- Email + password sign-up and sign-in  
+- Secure Credentials authentication  
+- Database session strategy  
+- Protected routes (`/dashboard`, `/skills`, `/jobs`, etc.)
+
+### 📊 Dashboard
+- Overview of skills, jobs, learning goals, applications  
+- Recent activity snapshot  
+- Color-coded status indicators  
+- Dark/light mode compatible
+
+### 🧠 Skills Management
+- Add skills with levels (1–5)
+- Categorize skills
+- Update + delete
+
+### 💼 Job Targets
+- Add job descriptions with role/company/seniority
+- View them in a clean list
+- Delete job targets
+- Access detailed view
+
+### ⚔️ Gap Analysis (Job Detail Page)
+- Compare required skills with user skills  
+- See mismatches visually  
+- Create related learning goals  
+
+### 🎯 Learning Goals
+- Create goals with title + description  
+- Status flow: Planned → In Progress → Done  
+- Color-coded and editable  
+- Full delete support
+
+### 📝 Job Applications
+- Track application status  
+- Status flow: Applied → OA → Interview → Offer → Rejected  
+- Update and delete apps inline  
+- Optional job link + notes
+
+### 🌓 Dark Mode
+- Sun/Moon toggle  
+- Global theming  
+- All components theme-aware  
+
+---
+
+# 📸 Screenshots
+
+### 🔐 Sign In Page
+<img src="./public/screenshots/SignIn.png" width="700"/>
+
+### 🏠 Dashboard
+<img src="./public/screenshots/Dashboard.png" width="700"/>
+
+### 🧠 Skills Page
+<img src="./public/screenshots/Skills.png" width="700"/>
+
+### 💼 Job Targets
+<img src="./public/screenshots/Jobs.png" width="700"/>
+
+### ⚔️ Gap Analysis (Job Detail)
+<img src="./public/screenshots/JobGap.png" width="700"/>
+
+### 🎯 Learning Goals
+<img src="./public/screenshots/Goals.png" width="700"/>
+
+### 📝 Job Applications
+<img src="./public/screenshots/Applications.png" width="700"/>
+
+---
+
+# 📂 Project Structure
+
+```
+src/
+  app/
+    auth/
+      sign-in/
+      sign-up/
+    dashboard/
+    skills/
+    jobs/
+      [id]/
+      new/
+    goals/
+    applications/
+  components/
+    ui/           # shadcn/ui components
+    theme-toggle/
+    theme-provider/
+  lib/
+    auth.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🛠️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.env`:
 
-## Learn More
+```
+DATABASE_URL="postgresql://<user>:<password>@localhost:5432/skillforge?schema=public"
+NEXTAUTH_SECRET="<long-random-hex>"
+NEXTAUTH_URL="http://localhost:3000"
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 🧰 Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-## Deploy on Vercel
+### 2. Run Prisma Migrations
+```bash
+npx prisma migrate dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Start Server
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open:  
+👉 http://localhost:3000
+
+---
+
+# 🔑 Authentication Overview
+
+Auth.js (NextAuth) with Credentials provider:
+
+- `/auth/sign-up` → Register  
+- `/auth/sign-in` → Login  
+- `/api/auth/*` → Backend routes  
+- Sessions stored in Prisma `Session` table  
+
+Protected routes handled via:
+
+```ts
+export { auth as middleware } from "./lib/auth";
+```
+
+---
+
+# 🗃️ Database Schema Highlights
+
+Prisma models used:
+- User  
+- Skill  
+- JobTarget  
+- JobRequiredSkill  
+- LearningGoal  
+- JobApplication  
+- Session (Auth.js)  
+
+`Account` and `VerificationToken` models removed as they are not required for Credentials auth.
+
+---
+
+# 🧹 Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build production bundle |
+| `npm run start` | Run production server |
+| `npx prisma studio` | DB explorer |
+
+<!-- ---
+
+# 🚀 Deployment (Vercel)
+
+1. Push repo to GitHub  
+2. Import into Vercel  
+3. Add environment variables  
+4. Connect to hosted Postgres (Neon/Supabase)  
+5. Run migrations:
+
+```bash
+npx prisma migrate deploy
+```
+
+6. Redeploy → Live 🎉 -->
+
+---
+
+# 🎯 What This Project Demonstrates
+
+- Modern **full-stack architecture**
+- **Database design** + relational modeling
+- **Authentication** with secure sessions
+- **Server Components + Client Components**
+- **Clean UI** with shadcn + Tailwind
+- **Type-safe APIs** with Zod
+- **Dark/light theming**
+- **CRUD across all features**
+
+Perfect for showcasing professional engineering skills.
+---
+
+# ⭐ If you like this project, star the repo!

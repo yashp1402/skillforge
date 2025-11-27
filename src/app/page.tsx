@@ -1,7 +1,13 @@
+// src/app/page.tsx
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className="space-y-6">
       <Card>
@@ -16,7 +22,9 @@ export default function Home() {
             build a targeted learning plan.
           </p>
 
-          <Button>Go to Dashboard</Button>
+          <Button onClick={() => router.push("/dashboard")}>
+            Go to Dashboard
+          </Button>
         </CardContent>
       </Card>
     </div>
