@@ -7,7 +7,7 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 
 ---
 
-# 🚀 Tech Stack
+# Tech Stack
 
 ### **Frontend / Full Stack**
 - ⚛️ **Next.js 16** (App Router, React Server Components)
@@ -17,15 +17,15 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 - 🌗 **next-themes** (light/dark theme toggle)
 
 ### **Backend**
-- 🟦 **Next.js Route Handlers** (`app/api/*`)
-- 🧾 **Zod** for schema validation
-- 🔐 **Auth.js (NextAuth)** with Credentials provider
-- 🔑 Secure DB-backed sessions
+-  **Next.js Route Handlers** (`app/api/*`)
+-  **Zod** for schema validation
+-  **Auth.js (NextAuth)** with Credentials provider
+-  Secure DB-backed sessions
 
 ### **Database**
-- 🐘 **PostgreSQL**
-- 📦 **Prisma ORM**
-- 🛠️ Full CRUD on skills, jobs, goals, applications
+-  **PostgreSQL**
+-  **Prisma ORM**
+-  Full CRUD on skills, jobs, goals, applications
 
 ### **Developer Tools**
 - Prisma Studio  
@@ -34,43 +34,43 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 
 ---
 
-# 🌟 Features
+# Features
 
-### 👤 User Authentication
+### User Authentication
 - Email + password sign-up and sign-in  
 - Secure Credentials authentication  
 - Database session strategy  
 - Protected routes (`/dashboard`, `/skills`, `/jobs`, etc.)
 
-### 📊 Dashboard
+### Dashboard
 - Overview of skills, jobs, learning goals, applications  
 - Recent activity snapshot  
 - Color-coded status indicators  
 - Dark/light mode compatible
 
-### 🧠 Skills Management
+### Skills Management
 - Add skills with levels (1–5)
 - Categorize skills
 - Update + delete
 
-### 💼 Job Targets
+### Job Targets
 - Add job descriptions with role/company/seniority
 - View them in a clean list
 - Delete job targets
 - Access detailed view
 
-### ⚔️ Gap Analysis (Job Detail Page)
+### Gap Analysis (Job Detail Page)
 - Compare required skills with user skills  
 - See mismatches visually  
 - Create related learning goals  
 
-### 🎯 Learning Goals
+### Learning Goals
 - Create goals with title + description  
 - Status flow: Planned → In Progress → Done  
 - Color-coded and editable  
 - Full delete support
 
-### 📝 Job Applications
+### Job Applications
 - Track application status  
 - Status flow: Applied → OA → Interview → Offer → Rejected  
 - Update and delete apps inline  
@@ -83,24 +83,24 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
-### 🔐 Sign In Page
+### Sign In Page
 <img src="./public/screenshots/SignIn.png" width="700"/>
 
-### 🏠 Dashboard
+### Dashboard
 <img src="./public/screenshots/Dashboard.png" width="700"/>
 
-### 🧠 Skills Page
+### Skills Page
 <img src="./public/screenshots/Skills.png" width="700"/>
 
-### 💼 Job Targets
+### Job Targets
 <img src="./public/screenshots/Jobs.png" width="700"/>
 
-### ⚔️ Gap Analysis (Job Detail)
+### Gap Analysis (Job Detail)
 <img src="./public/screenshots/JobGap.png" width="700"/>
 
-### 🎯 Learning Goals
+### Learning Goals
 <img src="./public/screenshots/Goals.png" width="700"/>
 
 ### 📝 Job Applications
@@ -145,7 +145,7 @@ NEXTAUTH_URL="http://localhost:3000"
 
 ---
 
-# 🧰 Local Development
+# Local Development
 
 ### 1. Install Dependencies
 ```bash
@@ -167,7 +167,7 @@ Open:
 
 ---
 
-# 🔑 Authentication Overview
+# Authentication Overview
 
 Auth.js (NextAuth) with Credentials provider:
 
@@ -184,7 +184,7 @@ export { auth as middleware } from "./lib/auth";
 
 ---
 
-# 🗃️ Database Schema Highlights
+# Database Schema Highlights
 
 Prisma models used:
 - User  
@@ -199,7 +199,7 @@ Prisma models used:
 
 ---
 
-# 🧹 Scripts
+# Scripts
 
 | Script | Description |
 |--------|-------------|
@@ -210,7 +210,7 @@ Prisma models used:
 
 <!-- ---
 
-# 🚀 Deployment (Vercel)
+# Deployment (Vercel)
 
 1. Push repo to GitHub  
 2. Import into Vercel  
@@ -226,7 +226,7 @@ npx prisma migrate deploy
 
 ---
 
-# 🎯 What This Project Demonstrates
+# What This Project Demonstrates
 
 - Modern **full-stack architecture**
 - **Database design** + relational modeling
@@ -239,5 +239,3 @@ npx prisma migrate deploy
 
 Perfect for showcasing professional engineering skills.
 ---
-
-# ⭐ If you like this project, star the repo!
