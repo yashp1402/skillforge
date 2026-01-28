@@ -1,4 +1,4 @@
-# 📘 SkillForge – Career Roadmap & Job-Fit Planner
+# SkillForge – Career Roadmap & Job-Fit Planner
 
 SkillForge is a full-stack **Next.js 16** application designed to help users track skills, compare them against job descriptions, identify gaps, and build a personalized learning roadmap.  
 It also includes job application tracking, learning goals, and a clean dashboard experience.
@@ -10,11 +10,11 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 # Tech Stack
 
 ### **Frontend / Full Stack**
-- ⚛️ **Next.js 16** (App Router, React Server Components)
-- 🧠 **React** + **TypeScript**
-- 🎨 **Tailwind CSS** (with dark mode)
-- 🧩 **shadcn/ui** components
-- 🌗 **next-themes** (light/dark theme toggle)
+- **Next.js 16** (App Router, React Server Components)
+- **React** + **TypeScript**
+- **Tailwind CSS** (with dark mode)
+- **shadcn/ui** components
+- **next-themes** (light/dark theme toggle)
 
 ### **Backend**
 -  **Next.js Route Handlers** (`app/api/*`)
@@ -76,7 +76,7 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 - Update and delete apps inline  
 - Optional job link + notes
 
-### 🌓 Dark Mode
+### Dark Mode
 - Sun/Moon toggle  
 - Global theming  
 - All components theme-aware  
@@ -108,7 +108,7 @@ This project is built using a modern **2025 tech stack** to demonstrate full-sta
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 src/
@@ -133,7 +133,7 @@ src/
 
 ---
 
-# 🛠️ Environment Variables
+# Environment Variables
 
 Create `.env`:
 
