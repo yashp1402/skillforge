@@ -223,19 +223,3 @@ npx prisma migrate deploy
 ```
 
 6. Redeploy → Live 🎉 -->
-
----
-
-# What This Project Demonstrates
-
-- Modern **full-stack architecture**
-- **Database design** + relational modeling
-- **Authentication** with secure sessions
-- **Server Components + Client Components**
-- **Clean UI** with shadcn + Tailwind
-- **Type-safe APIs** with Zod
-- **Dark/light theming**
-- **CRUD across all features**
-
-Perfect for showcasing professional engineering skills.
----
